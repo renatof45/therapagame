@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A single page web-app to send messages using Google Drive API">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Rapa Game</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="196x196" href="images/touch/chrome-touch-icon-196x196.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+        <link rel="canonical" href="http://www.example.com/">
+        -->
+
+    <!-- build:css styles/components/main.min.css -->
+    <link rel="stylesheet" href="styles/h5bp.css">
+    <link rel="stylesheet" href="styles/components/components.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="text/javascript" src="scripts/realtime-client-utils.js"></script>
+    <script type="text/javascript" src="scripts/realtime-rapa-game.js"></script>
+    <script type="text/javascript" src="scripts/utils.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+
+    <!-- endbuild -->
+
+</head>
+
+<body onLoad='startRealtime()'>
+    <button id="authorizeButton" style="display:none;" disabled>You must authorize</button>
+    <header class="app-bar promote-layer">
+        <div class="app-bar-container">
+            <button class="menu">
+                <img src="images/hamburger.svg" alt="Menu">
+            </button>
+            <h1 class="nav_desc" id="nav_desc">ted</h1>
+            <h1 class="logo">Message Drive</h1>
+            <section class="app-bar-actions">
+                <!-- Put App Bar Buttons Here -->
+            </section>
+        </div>
+    </header>
+    <a href="scripts/teste.html"></a>
+
+    <nav class="navdrawer-container promote-layer">
+        <h4>Navigation</h4>
+        <ul>
+            <li><a href="#home">Home</a>
+            </li>
+            <li><a href="#contacts">Contacts</a>
+            </li>
+            <li><a href="#newmessages">Check Messages</a>
+            </li>
+            <li><a href="#invite">Invite</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="main">
+            <div class="sub_header">
+                <div id="sub_header_title" class="text"></div>
+            </div>
+            <div id="footer"  class="footer">
+
+            </div>
+            <div id="palyers" class="footer" style="display:none;">
+                <button id="play_again" style="display:none;" onclick="play_again();">Play again</button>
+                <div id="nextMove" style="display:none;"></div>
+                <div id="online_palyers" class="online_players"></div>
+            </div>
+            <div id="groups"  class="footer" >
+                  
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+    <script src="scripts/three.min.js"></script>
+    <script src="scripts/stats.min.js"></script>
+    <script src="scripts/webgl_rapagame.js"></script>
+
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+
+    <!-- Built with love using Web Starter Kit -->
+</body>
+
+</html>

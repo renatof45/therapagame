@@ -1,0 +1,289 @@
+/*
+ * Web Starter Kit
+ *
+ * Multi-screen layout styles for your page. Brought to you by the
+ * Web Starter Kit team.
+ *
+*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 300;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 100%;
+}
+.app-bar {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4285f4;
+    overflow: hidden;
+    z-index: 1;
+}
+.app-bar-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.app-bar.open, .app-bar.open ~ main {
+    -webkit-transform: translate(250px, 0);
+    transform: translate(250px, 0);
+}
+.app-bar .logo {
+    display: none;
+    /*    -webkit-flex: 1;
+        flex: 1;
+        font-size: 2em;
+        line-height: 60px;
+        margin: 0 16px;
+        padding: 0;
+        color: #fefefe;
+        float: none;
+        max-width: none;
+        font-weight: 300;
+        line-height: 60px;*/
+}
+.app-bar .nav_desc {
+    display: block;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 2em;
+    line-height: 60px;
+    margin: 0 16px;
+    padding: 0;
+    color: #fefefe;
+    float: none;
+    max-width: none;
+    font-weight: 300;
+    line-height: 60px;
+}
+.app-bar .logo a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+.app-bar-actions {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    z-index: 2;
+}
+.app-bar button {
+    width: 60px;
+    height: 60px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    transition: background-color 0.2s ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
+.app-bar button img {
+    width: 60px;
+    height: 60px;
+}
+.app-bar button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.app-bar button:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: 0;
+}
+.app-bar button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+button.menu img {
+    height: 24px;
+    width: 24px;
+}
+.promote-layer {
+    /*
+    This may promote the layer to a composited
+    layer.
+  
+    Replace with will-change when available
+  
+    #perfmatters
+    */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.base, p, ul, ol {
+    font-size: 19px;
+}
+.navdrawer-container {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #3367D6;
+    color: #fefefe;
+    -webkit-transform: translate(-250px, 0);
+    transform: translate(-250px, 0);
+    overflow-y: scroll;
+}
+.navdrawer-container.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.app-bar, .navdrawer-container, main {
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+.navdrawer-container h4, .navdrawer-container ul li a {
+    height: auto;
+    padding: 17px 20px;
+    line-height: 1.4;
+}
+.navdrawer-container h4 {
+    background-color: white;
+    color: #3367D6;
+}
+.navdrawer-container ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.navdrawer-container ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.2s ease-out;
+    white-space: nowrap;
+}
+.navdrawer-container ul li {
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: white;
+    padding: 0;
+}
+.navdrawer-container ul li::before {
+    content: none;
+}
+.navdrawer-container ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.navdrawer-container ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: 0;
+}
+.navdrawer-container ul li a:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+main {
+    margin: 0 auto;
+    /* Height of the header */
+    position: relative;
+    display: block;
+    //overflow: auto;
+    padding: 60px 0px 0px 0px;
+    min-height: 100%;
+    //border:2px solid;
+}
+.footer {
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    bottom: 0px;
+    overflow:hidden;
+    //border:2px solid;
+
+}
+
+.online_players{
+    position: absolute;
+    margin: 0 auto;
+    top:50px;
+}
+
+.loading {
+    position: absolute;
+    display: none;
+    padding: 0px 0px 0px 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 40px;
+    height: 30px;
+    width: 100px;
+    border: 2px solid;
+    z-index: 10000;
+    border-radius: 10px;
+    background-color: lemonchiffon;
+}
+.sub_header {
+    display: none;
+}
+#contacts_list {
+    position: absolute;
+    width: 100%;
+    //height: 100%;
+
+}
+#contacts_list ul {
+    color: black;
+    font-size: 24px;
+    list-style: none;
+    padding-left: 0px;
+    padding-top: 0px;
+    //background-color: gainsboro;
+
+}
+#contacts_list li {
+    background-color: gainsboro;
+}
+#contacts_list a {
+    text-decoration: none;
+    color: black;
+}
+#invite {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+#invite ul {
+    padding-left: 0px;
+    padding-top: 20px;
+    list-style-type: none;
+}
+#invite p {
+    padding-top: 10px;
+}
+#invite input {
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    //padding-bottom: 10px;
+
+}
+#invite .button {
+    float: left;
+}
+.message_display {
+    width: 100%;
+    display:inline;
+}
+
